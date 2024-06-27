@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SYMPOSIUM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="s.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  /* Slide-in Animation */
+  .slide-in {
+      animation: slideIn 2s ease forwards;
+  }
+
+  @keyframes slideIn {
+      0% {
+          opacity: 0;
+          transform: translateX(-100%);
+      }
+      100% {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+    /* Slide-in Animation from left */
+    .slide-in-left {
+        animation: slideInLeft 1s ease forwards;
+    }
+
+    @keyframes slideInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Slide-in Animation from right */
+    .slide-in-right {
+        animation: slideInRight 1s ease forwards;
+    }
+
+    @keyframes slideInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+  
+    /* Slide-in Animation from top */
+    .slide-in-top {
+        animation: slideInTop 1s ease forwards;
+    }
+
+    @keyframes slideInTop {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Slide-up animation */
+  .slide-up {
+    transform: translateY(100%);
+    animation: slideUpAnimation 1s ease-in-out forwards;
+  }
+
+  @keyframes slideUpAnimation {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+
+</style>
+
+  </head>
+  <body>
+    <div class="first" id="first">
+      <div class="header" id="header">
+          <div class="logo">
+              <img src="images.png" alt="Velammal College of Engineering and Technology" height="70px" width="70px">
+              <p id="ctitle">VELAMMAL COLLEGE OF ENGINEERING AND TECHNOLOGY</p>
+          </div>
+          <nav>
+              <ul>
+                  <li><a href="stargaze.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="eventpage.html">EVENTS</a></li>
+                  <li><a href=".footer">CONTACT</a></li>
+              </ul>
+          </nav>
+          <div class="buttons">
+              <button type="button" id="register">REGISTER</button>
+              <a href="login.html">
+                  <button type="button" id="login">LOGIN</button>
+              </a>
+          </div>
+      </div>
+  </div>
+  
+  <div class="logcon" id="logcon">
+    <div class="clogo" id="logo">
+        <img src="Untitled_Project__1_-removebg-preview.png" alt="catalysis_2k24" height="300px" width="500px">
+    </div>
+    <div class="catcon" id="content">
+        <h1 style="text-align: center;color:orange">CATALYSIS 2K24</h1>
+        <p style="color:white;">Catalysis 2k24 is set to be an enriching symposium event spanning from July 19 to 21, offering a diverse range of activities catering to both technical and non-technical enthusiasts. At its core, the symposium promises stimulating discussions and presentations on cutting-edge catalysis research, providing a platform for scholars, researchers, and industry professionals to exchange ideas and explore the latest advancements in the field. Alongside the technical sessions, attendees can engage in hands-on workshops designed to deepen their understanding of catalytic processes and techniques. Moreover, embracing a holistic approach, Catalysis 2k24 integrates cultural events, fostering networking opportunities in a relaxed and vibrant atmosphere. From art exhibitions to cultural performances, participants will have the chance to unwind and connect with peers, enhancing both their professional and personal experiences at the symposium.</p>
+    </div>
+</div>
+
+  <div class="marquee-container">
+    <div class="marquee">
+        ⚠️Last Date for Registration is 15 July 2024⚠️ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Food and Refreshments will be provided
+    </div>
+</div>
+<div class="second" id="eventSection">
+  <h1 style="text-align: center;text-decoration: solid;color: orange;">EVENTS</h1>
+  <div class="eventbox">
+      <a href="#Events">
+          <div class="card1">
+              <div class="info">
+                  <h4>TECH EVENTS</h4>
+                  <p>Tech eventbox</p>
+              </div>
+          </div>
+      </a>
+      <a href="#Events">
+          <div class="card2">
+              <div class="info">
+                  <h4>NON-TECH EVENTS</h4>
+                  <p>Non-Tech eventbox</p>
+              </div>
+          </div>
+      </a>
+      <a href="#Events">
+          <div class="card3">
+              <div class="info">
+                  <h4>WORKSHOP</h4>
+                  <p>Workshop eventbox</p>
+              </div>
+          </div>
+      </a>
+      <a href="#Events">
+          <div class="card4">
+              <div class="info">
+                  <h4>CULTURAL EVENTS</h4>
+                  <p>Cultural eventbox</p>
+              </div>
+          </div>
+      </a>
+  </div>
+</div>
+
+<div class="third" id="third">
+  <h1 style="text-align: center;margin:20px;color:orange">SPONSERS</h1>
+  <div class="parent">
+  <div class="child" style="background-color: violet;"><h3 style="position: relative;top:40px;">SPONSER 1</h3></div>
+  <div class="child" style="background-color: blueviolet;"><h3 style="position: relative;top:40px;">SPONSER 2</h3></div>
+  <div class="child" style="background-color: rgb(49, 226, 43);"><h3 style="position: relative;top:40px;">SPONSER 3</h3></div>
+  <div class="child" style="background-color: rgb(0, 179, 77);"><h3 style="position: relative;top:40px;">SPONSER 4</h3></div>
+  <div class="child" style="background-color: rgb(1, 88, 154);"><h3 style="position: relative;top:40px;">SPONSER 5</h3></div>
+  <div class="child" style="background-color: rgb(0, 94, 255);"><h3 style="position: relative;top:40px;">SPONSER 6</h3></div>
+  <div class="child" style="background-color: rgb(156, 0, 55);"><h3 style="position: relative;top:40px;">SPONSER 7</h3></div>
+  <div class="child" style="background-color: rgb(255, 0, 212);"><h3 style="position: relative;top:40px;">SPONSER 8</h3></div>
+  <div class="child" style="background-color: rgb(255, 75, 39);"><h3 style="position: relative;top:40px;">SPONSER 9</h3></div>
+  <div class="child" style="background-color: rgb(255, 0, 0);"><h3 style="position: relative;top:40px;">SPONSER 10</h3></div>
+  </div>
+</div>
+
+<h1 style="text-align: center;color: orange;">EVENT COORDINATORS</h1>
+
+<div class="image-scroll-container" id="image-scroll-container">
+  <div class="image-scroll-wrapper">
+    <img src="coord1.jpg" alt="coord 1">&nbsp;
+    <img src="coord 2.jpg" alt="coord 2">&nbsp;
+    <img src="coord 3.jpg" alt="coord 3">&nbsp;
+    <img src="coord 4.jpg" alt="coord 4">&nbsp;
+    <img src="coord 5.jpg" alt="coord 5">&nbsp;
+    <img src="coord 6.jpg" alt="coord 6">&nbsp;
+    <img src="coord 7.jpg" alt="coord 7">&nbsp;
+    <img src="coord 8.jpg" alt="coord 8">&nbsp;
+    <img src="coord 9.jpg" alt="coord 9">&nbsp;
+    <img src="coord 10.jpg" alt="coord 10">&nbsp;
+    <img src="coord 11r.jpg" alt="coord 11">&nbsp;
+    <img src="coord 12.jpg" alt="coord 12">
+
+  </div>
+</div>
+
+<div class="footer"  id="footer">
+  <img src="Untitled_Project__1_-removebg-preview.png" alt="catalysis_2k24" height="200px" width="300px">
+  <div class="linkcon">
+      <h2 style="color: orange;margin-bottom: 10px;margin-top: 10px;">TRAVEL</h2>
+      <div class="conus">
+          <a href="#Home"><h4 style="margin: 10px;">HOME</h4></a>
+          <a href="about.html"><h4 style="margin: 10px;">ABOUT</h4></a>
+          <a href="#Events"><h4 style="margin: 10px;">EVENTS</h4></a>
+          <a href="#Contact"><h4 style="margin: 10px;">CONTACT</h4></a>
+      </div>
+  </div>
+  <div class="icons">
+    <h2 style="color: orange;margin-bottom: 10px;margin-top: 10px;text-align: center;">CONTACT US</h2>
+    <div class="ilist">
+      <ul class="ul">
+        <li><i class="fa fa-facebook-f"></i></li>
+        <li><i class="fa fa-twitter"></i></li>
+        <li><i class="fa fa-instagram"></i></li>
+        <li><i class="fa fa-linkedin"></i></li>
+        <li><i class="fa fa-youtube-play"></i></li>
+      </ul>            
+    </div>
+    
+  </div>
+  <div class="adph">
+    <h2 style="color:orange;margin-bottom: 10px;text-align: center;margin-top: 10px;">ADDRESS</h2>
+    <p style="color: orange;">Velammal College of Engineering and Technology</p>
+    <p style="color: orange;">Viraganoor, Madurai-625009.</p>        
+    <h4 style="color:orange;margin: 20px;">PH: +91-9994999949</h4>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      var eventSection = document.getElementById("eventSection");
+      eventSection.classList.add("slide-in");
+  });
+    document.addEventListener("DOMContentLoaded", function () {
+        var logo = document.getElementById("logo");
+        var content = document.getElementById("content");
+
+        logo.classList.add("slide-in-left");
+        content.classList.add("slide-in-right");
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        var header = document.getElementById("header");
+        header.classList.add("slide-in-top");
+    });
+
+    <!---->
+
+  // Fade-in animation for sponsors
+  const third = document.getElementById('third');
+  const thirdObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      }
+    });
+  });
+
+  thirdObserver.observe(third);
+
+  // Slide-up animation for footer
+  const footer = document.getElementById('footer');
+  const footerObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('slide-up');
+      }
+    });
+  }, { rootMargin: '0px 0px -100px 0px' }); // Adjust rootMargin as needed
+
+  footerObserver.observe(footer);
+</script>
+
+
+  </body>
+</html>

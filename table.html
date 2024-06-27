@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibrant Styled Table</title>
+<style>
+    /* Styles for the table */
+    .table-container {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    table {
+        width: 100%; /* Set fixed width */
+        border-collapse: collapse;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    #day1,#day2
+    {
+        width: 70%;
+    }
+    
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border: 5px inset #ddd;
+    }
+    
+    tr
+    {
+        border-style: hidden;
+    }
+    th {
+        background-color: #3f51b5;
+        color: #fff;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f1f8e9;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #ffccbc;
+    }
+
+    /* Hover effect */
+    tr:hover {
+        background-color: #ffee58;
+    }
+
+    /* Styles for the tabs */
+    .tab {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+    .tab button.active {
+        background-color: orange;
+        color: white;
+    }
+    .tablinks {
+        color: orange;
+        font-size: large;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Day selection tabs -->
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'day1')">Day 1</button>
+  <button class="tablinks" onclick="openTab(event, 'day2')">Day 2</button>
+</div>
+
+<!-- Tables for Day 1 and Day 2 events -->
+<div class="table-container">
+    <table id="day1">
+        <thead>
+            <tr>
+                <th>EVENT</th>
+                <th>ORGANIZERS</th>
+                <th>TIME</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TechTrek</td>
+                <td>VCET Students(IT)</td>
+                <td>09:30 A.M - 11:30 A.M</td>
+            </tr>
+            <tr>
+                <td>Digital Dialogues - A Pep Talk</td>
+                <td>ByteBlaze Entertainment</td>
+                <td>12:00 P.M - 02:00 P.M</td>
+            </tr>
+            <tr>
+                <td>Future Fun Fair</td>
+                <td>VCET Students(CSE)</td>
+                <td>02:30 P.M - 04:00 P.M</td>
+            </tr>
+            <tr>
+                <td>Quick Quiz - A Random Trivia</td>
+                <td>VCET Students(ECE)</td>
+                <td>04:05 P.M - 04:30 P.M</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="table-container">
+    <table id="day2" style="display:none;">
+        <thead>
+            <tr>
+                <th>EVENT</th>
+                <th>ORGANIZERS</th>
+                <th>TIME</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Generative AI - A Future Revolution</td>
+                <td>R.G Data Solutions</td>
+                <td>09:30 A.M - 11:30 A.M</td>
+            </tr>
+            <tr>
+                <td>Melody minutes</td>
+                <td>The Boyzz Band</td>
+                <td>12:00 P.M - 03:00 P.M</td>
+            </tr>
+            <tr>
+                <td>Know our College</td>
+                <td>VCET Students - All branch</td>
+                <td>03:10 P.M - 04:00 P.M</td>
+            </tr>
+            <tr>
+                <td>Quick Quiz - A Random Trivia</td>
+                <td>VCET Students(ECE)</td>
+                <td>04:05 P.M - 04:30 P.M</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByTagName("table");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "table";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>

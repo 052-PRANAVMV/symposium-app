@@ -1,0 +1,315 @@
+*
+{
+    margin:0px;
+    padding:0px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+#ctitle
+{
+    width: 300px;
+}
+.logo{display:flex;align-items: center;}
+.header
+{
+    color:white;
+    display:flex;
+    width:100%;
+    height:70px;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header::before
+{
+    content: '';
+    position: absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,rgb(255,255,255,.4),transparent);
+    transition: .5s;
+
+}
+.header:hover::before
+{
+    left:100%;
+}
+li
+{
+    list-style: none;
+}
+ul
+{
+    display: flex;
+    gap:20px;
+}
+a
+{
+    text-decoration: none;
+    color:white;
+    transition: transform 0.3s ease;
+}
+a:hover
+{
+    color:orange;
+}
+li:hover
+{
+
+    transform:scale(1.05);
+}
+.buttons
+{
+    padding:30px;
+}
+#register,#login
+{
+    margin:5px;
+    padding:10px;
+    border-radius: 10px;
+    background-color:white;
+    color:orange;
+    cursor:pointer;
+    transition: transform 0.3s ease; 
+
+}
+#register:hover,#login:hover
+{
+  background-color: orange;
+  color:white;
+}
+#register:active,#login:active
+{
+    transform: scale(1.05);
+}
+
+/* Styles for the table */
+.table-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%; /* Set fixed width */
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#day1,#day2
+{
+    width: 70%;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 5px inset #ddd;
+}
+
+tr
+{
+    border-style: hidden;
+}
+th {
+    background-color: #3f51b5;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f8e9;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffccbc;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #ffee58;
+}
+
+/* Styles for the tabs */
+.tab {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+.tab button.active {
+    background-color: orange;
+    color: white;
+}
+.tablinks {
+    color: orange;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+
+.techevent
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.techinfo, .techimg
+{
+    display: flex;
+    justify-content: center;
+}
+
+.techinfo{
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding:20px;
+}
+.techimg
+{
+    flex-direction: row;
+}
+
+#register
+{
+    display: flex;
+    justify-content: center;
+    width:100px;
+    margin:5px;
+    padding:10px;
+    border-radius: 10px;
+    background-color:white;
+    color:rgb(0, 115, 255);
+    cursor:pointer;
+    transition: transform 0.3s ease; 
+
+}
+#register:hover
+{
+  background-color: rgb(0, 115, 255);
+  color:white;
+}
+
+.techinfo p
+{
+    font-size: 17px;
+    font-family: monospace;
+}
+
+.ntechevent
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ntechinfo, .ntechimg
+{
+    display: flex;
+    justify-content: center;
+}
+
+.ntechinfo{
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding:20px;
+}
+.ntechimg
+{
+    flex-direction: row;
+}
+
+
+.ntechinfo p
+{
+    font-size: 17px;
+    font-family: monospace;
+}
+
+
+
+
+.cevent
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cinfo, .cimg
+{
+    display: flex;
+    justify-content: center;
+}
+
+.cinfo{
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding:20px;
+}
+.cimg
+{
+    flex-direction: row;
+}
+
+
+.cinfo p
+{
+    font-size: 17px;
+    font-family: monospace;
+}
+
+
+
+
+
+
+.wevent
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.winfo, .wimg
+{
+    display: flex;
+    justify-content: center;
+}
+
+.winfo{
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    padding:20px;
+}
+.wimg
+{
+    flex-direction: row;
+}
+
+
+.winfo p
+{
+    font-size: 17px;
+    font-family: monospace;
+}

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="event.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+        }
+
+        .snowflake1 {
+        position: absolute;
+        top: -10px;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        animation: snowfall1 linear infinite;
+    }
+
+    @keyframes snowfall1 {
+        0% { transform: translateY(-10px); }
+        100% { transform: translateY(100vh); }
+    }
+
+    .snowflake2 {
+        position: absolute;
+        top: -10px;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        animation: snowfall1 linear infinite;
+    }
+
+    @keyframes snowfall2 {
+        0% { transform: translateY(101vh); }
+        100% { transform: translateY(200vh); }
+    }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .honeycomb-grid1, .honeycomb-grid2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+        }
+
+        .honeycomb-grid2
+        {
+          position: relative;
+          left:111px;
+          margin-bottom: 60px;
+        }
+
+        .honeycomb-cell{
+            width: 200px;
+            height: 200px;
+            margin: 0 10px;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+        }
+
+        .honeycomb-cell img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .honeycomb-cell:hover
+        {
+          transform: scale(1.03);
+        }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.23s ease-in-out;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    
+}
+
+.honeycomb-cell:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+    
+}
+
+.overlay p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.slide-left {
+            opacity: 0;
+            transform: translateX(50px); /* Initially move right */
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .slide-left.in-view {
+            opacity: 1;
+            transform: translateX(0); /* Move to original position */
+        }
+        .slide-right {
+            opacity: 0;
+            transform: translateX(-50px); /* Initially move left */
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .slide-right.in-view {
+            opacity: 1;
+            transform: translateX(0); /* Move to original position */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="snowflake1" style="left: 5%; animation-duration: 10s;opacity: 0.3;"></div>
+    <div class="snowflake1" style="left: 10%; animation-duration: 10s;"></div>
+    <div class="snowflake1" style="left: 15%; animation-duration: 8s;opacity: 0.5;"></div>
+    <div class="snowflake1" style="left: 20%; animation-duration: 12s;"></div>
+    <div class="snowflake1" style="left: 25%; animation-duration: 13s;opacity: 0.2;"></div>
+    <div class="snowflake1" style="left: 30%; animation-duration: 8s;"></div>
+    <div class="snowflake1" style="left: 35%; animation-duration: 11s;opacity: 0.5;"></div>
+    <div class="snowflake1" style="left: 40%; animation-duration: 10s;"></div>
+    <div class="snowflake1" style="left: 45%; animation-duration: 7s;opacity: 0.4;"></div>
+    <div class="snowflake1" style="left: 50%; animation-duration: 12s;"></div>
+    <div class="snowflake1" style="left: 55%; animation-duration: 10s;opacity: 0.7;"></div>
+    <div class="snowflake1" style="left: 60%; animation-duration: 12s;"></div>
+    <div class="snowflake1" style="left: 65%; animation-duration: 10s;opacity: 0.8;"></div>
+    <div class="snowflake1" style="left: 70%; animation-duration: 10s;"></div>
+    <div class="snowflake1" style="left: 75%; animation-duration: 9s;opacity: 0.3;"></div>
+    <div class="snowflake1" style="left: 80%; animation-duration: 12s;"></div>
+    <div class="snowflake1" style="left: 85%; animation-duration: 15s;opacity: 0.6;"></div>
+    <div class="snowflake1" style="left: 90%; animation-duration: 8s;"></div>
+    <div class="snowflake1" style="left: 95%; animation-duration: 12s;opacity: 0.9;"></div>
+    <div class="content">
+        <div class="first">
+            <div class="header">
+                <div class="logo">
+                    <img src="images.png" alt="Velammal College of Engineering and Technology" height="70px"
+                         width="70px">
+                    <p id="ctitle">VELAMMAL COLLEGE OF ENGINEERING AND TECHNOLOGY</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="stargaze.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="eventpage.html">EVENTS</a></li>
+                        <li><a href="#Contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="buttons">
+                    <a href="login.html">
+                        <button type="button" id="login">LOGIN</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <h1 style="text-align: center;stroke: black;color: orange;margin-top:40px;text-decoration: underline;">EVENTS</h1>
+        <div class="honeycomb-grid1 " style="margin-top: 10px;">
+            <div class="honeycomb-cell">
+                <img src="Untitled Project (2).jpg" alt="Technical">
+                <div class="overlay">
+                    <a href="#technical event"><p>Technical</p></a>
+                </div>
+            </div>
+            <div class="honeycomb-cell ">
+                <img src="non technical.jpg" alt="Non-Technical">
+                <div class="overlay">
+                    <a href="#non-technical event"><p>Non-Technical</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="honeycomb-grid2" style="margin-bottom: 10px;">
+            <div class="honeycomb-cell">
+                <img src="cultural.jpg" alt="Cultural">
+                <div class="overlay">
+                    <a href="#cultural event"><p>Cultural</p></a>
+                </div>
+            </div>
+            <div class="honeycomb-cell">
+                <img src="workshop.jpg" alt="Workshop">
+                <div class="overlay">
+                    <a href="#wshop"><p>Workshop</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="snowflake2" style="left: 5%; animation-duration: 10s;opacity: 0.3;"></div>
+        <h1 style="text-align: center;stroke: black;color: orange;margin-top:40px;text-decoration: underline;">SHOW STEALERS</h1>
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'day1')">Day 1</button>
+            <button class="tablinks" onclick="openTab(event, 'day2')">Day 2</button>
+        </div>
+        <!-- Tables for Day 1 and Day 2 events -->
+        <div class="table-container">
+            <table id="day1">
+                <thead>
+                    <tr>
+                        <th>EVENT</th>
+                        <th>ORGANIZERS</th>
+                        <th>TIME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TechTrek</td>
+                        <td>VCET Students(IT)</td>
+                        <td>09:30 A.M - 11:30 A.M</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Dialogues - A Pep Talk</td>
+                        <td>ByteBlaze Entertainment</td>
+                        <td>12:00 P.M - 02:00 P.M</td>
+                    </tr>
+                    <tr>
+                        <td>Future Fun Fair</td>
+                        <td>VCET Students(CSE)</td>
+                        <td>02:30 P.M - 04:00 P.M</td>
+                    </tr>
+                    <tr>
+                        <td>Quick Quiz - A Random Trivia</td>
+                        <td>VCET Students(ECE)</td>
+                        <td>04:05 P.M - 04:30 P.M</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-container">
+            <table id="day2" style="display:none;">
+                <thead>
+                    <tr>
+                        <th>EVENT</th>
+                        <th>ORGANIZERS</th>
+                        <th>TIME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Generative AI - A Future Revolution</td>
+                        <td>R.G Data Solutions</td>
+                        <td>09:30 A.M - 11:30 A.M</td>
+                    </tr>
+                    <tr>
+                        <td>Melody minutes</td>
+                        <td>The Boyzz Band</td>
+                        <td>12:00 P.M - 03:00 P.M</td>
+                    </tr>
+                    <tr>
+                        <td>Know our College</td>
+                        <td>VCET Students - All branch</td>
+                        <td>03:10 P.M - 04:00 P.M</td>
+                    </tr>
+                    <tr>
+                        <td>Quick Quiz - A Random Trivia</td>
+                        <td>VCET Students(ECE)</td>
+                        <td>04:05 P.M - 04:30 P.M</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <section id="technical event">
+        <h1 style="stroke: black;color: orange;margin-top:40px;text-decoration: underline;">TECHNICAL EVENTS</h1>
+        <br>
+        <br>
+        <div class="techevent">
+            <div class="techinfo slide-right" style="color: white;"><p>🚀 Dive into the heart of innovation and excitement with our upcoming technical extravaganza! Calling all tech enthusiasts and problem-solvers to join us for a whirlwind of electrifying challenges, from adrenaline-pumping coding competitions and exhilarating hackathons to groundbreaking paper and project presentations. Ignite your passion for technology and unleash your creativity in an atmosphere pulsating with innovation and camaraderie. Don't miss out on the opportunity to showcase your skills, learn from the best, and be part of something extraordinary. Get ready to elevate your technical prowess and embark on an unforgettable journey of discovery and achievement! Join us and let's shape the future together!</p><br><button type="button" id="register">VIEW</button></div>
+            <div class="techimg slide-left"><img src="techevent image.jpg" alt="Tech Events" height="300px" width="500px"></div>
+        </div>
+        </section>
+        <br>
+        <section id="non-technical event">
+        <h1 style="stroke: black;color: orange;margin-top:40px;text-decoration: underline;">NON - TECHNICAL EVENTS</h1>
+        <br>
+        <br>
+        <div class="ntechevent">
+            <div class="ntechimg slide-right"><img src="non tech event image.jpg" alt="Non - Tech Events" height="300px" width="500px"></div>
+            <div class="ntechinfo slide-left" style="color: white;"><p>Get ready to dive into a whirlwind of excitement and camaraderie with our non-technical events extravaganza! 🎉 From the heart-pounding adrenaline of fandom quizzes 🤓 to the soul-stirring melodies of singing competitions 🎤, the infectious rhythm of dance-offs 💃, and the thrill of sports showdowns 🏆, there's something for everyone in this electrifying lineup. But wait, there's more! We've infused these fun activities with a twist of technical knowledge 💡, adding an extra layer of challenge and intrigue. Whether it's flexing your pop culture prowess in the fandom quiz, hitting the high notes in the singing contest, busting out your best moves on the dance floor, or showcasing your athleticism in sports, each event is designed to test not just your skills but also your savvy in the digital age. So gather your squad, unleash your competitive spirit, and get ready to conquer the stage with a fusion of fun, talent, and a dash of technical know-how. Victory awaits the bold and the enthusiastic—join us and let's make memories that will last a lifetime! 🚀</p><br><button type="button" id="register">VIEW</button></div>
+            
+        </div>
+        </section>
+        <section id="cultural event">
+            <h1 style="stroke: black;color: orange;margin-top:40px;text-decoration: underline;">CULTURAL EVENTS</h1>
+            <br>
+            <br>
+            <div class="cevent">
+                
+                <div class="cinfo slide-right" style="color: white;"><p>Step into a realm of cultural splendor and artistic brilliance with our spectacular lineup of cultural events! 🎭 From the mesmerizing rhythm of dance performances that will set the stage on fire 💃 to the soul-stirring melodies of enchanting singing competitions 🎤, get ready to be transported to a world of pure magic and expression. But that's not all! Brace yourself for side-splitting laughter as comedians take the spotlight with their rib-tickling stand-up routines 🤣, and be captivated by the raw emotion and talent of actors bringing stories to life through captivating dramas 🎬. And for those who dare to showcase their unique talents, our talent shows offer the perfect platform to shine bright and dazzle the audience ✨. But wait, there's more! Dive into the vibrant world of music bands 🎸, where every note resonates with passion and energy, creating an atmosphere of pure euphoria. With an array of fun-filled events that celebrate the richness of culture and creativity, there's something for everyone to enjoy and cherish. So come, be a part of this cultural extravaganza and let your spirit soar amidst the magic of art, music, and talent! 🎉</p><br><button type="button" id="register">VIEW</button></div>
+                <div class="cimg slide-left"><img src="cultural image.jpg" alt="Culturals" height="300px" width="500px"></div>
+            </div>
+        </section>
+
+        <section id="wshop">
+                <h1 style="stroke: black;color: orange;margin-top:40px;text-decoration: underline;">WORKSHOP</h1>
+                <br>
+                <br>
+                <div class="wevent">
+                    <div class="wimg slide-right"><img src="workshop image.jpg" alt="Workshop" height="300px" width="500px"></div>
+                    <div class="winfo slide-left" style="color: white;"><p>Get ready to dive into a whirlwind of excitement and camaraderie with our non-technical events extravaganza! 🎉 From the heart-pounding adrenaline of fandom quizzes 🤓 to the soul-stirring melodies of singing competitions 🎤, the infectious rhythm of dance-offs 💃, and the thrill of sports showdowns 🏆, there's something for everyone in this electrifying lineup. But wait, there's more! We've infused these fun activities with a twist of technical knowledge 💡, adding an extra layer of challenge and intrigue. Whether it's flexing your pop culture prowess in the fandom quiz, hitting the high notes in the singing contest, busting out your best moves on the dance floor, or showcasing your athleticism in sports, each event is designed to test not just your skills but also your savvy in the digital age. So gather your squad, unleash your competitive spirit, and get ready to conquer the stage with a fusion of fun, talent, and a dash of technical know-how. Victory awaits the bold and the enthusiastic—join us and let's make memories that will last a lifetime! 🚀</p><br><button type="button" id="register">VIEW</button></div>
+                    
+                </div>
+        </section>
+        <script>
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByTagName("table");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(tabName).style.display = "table";
+                evt.currentTarget.className += " active";
+            }
+
+            const sections = document.querySelectorAll('.slide-right, .slide-left');
+
+    const options = {
+        threshold: 0.5 // Trigger animation when 50% of the element is in view
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+
+    const fadeInSection = document.querySelectorAll('.fade-in');
+
+const fadeOptions = {
+    threshold: 0.5 // Trigger fade-in animation when 50% of the element is in view
+};
+
+const fadeObserver = new IntersectionObserver((entries, fadeObserver) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, fadeOptions);
+
+fadeInSection.forEach(section => {
+    fadeObserver.observe(section);
+});
+        </script>
+    </div>
+</body>
+</html>
